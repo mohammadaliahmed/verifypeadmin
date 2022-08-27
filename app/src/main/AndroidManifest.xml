@@ -3,8 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.appsinventiv.verifypeadmin">
 
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:name="com.appsinventiv.verifypeadmin.Utils.ApplicationClass"
@@ -32,6 +36,8 @@
             android:name=".Activites.MainActivity"
             android:theme="@style/Theme.VerifyPe.NoActionBar" />
         <activity android:name=".Activites.ChatListScreen" />
+        <activity android:name=".Activites.Notifications" />
+        <activity android:name=".Activites.AddNotifications" />
 
         <service android:name=".Utils.MyFirebaseMessagingService"
             android:exported="false">

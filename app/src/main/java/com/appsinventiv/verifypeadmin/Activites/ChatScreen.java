@@ -17,6 +17,7 @@ import com.appsinventiv.verifypeadmin.Adapters.SupportChatAdapter;
 import com.appsinventiv.verifypeadmin.Models.SupportChatModel;
 import com.appsinventiv.verifypeadmin.Models.User;
 import com.appsinventiv.verifypeadmin.R;
+import com.appsinventiv.verifypeadmin.Utils.Constants;
 import com.appsinventiv.verifypeadmin.Utils.KeyboardUtils;
 import com.appsinventiv.verifypeadmin.Utils.NotificationAsync;
 import com.appsinventiv.verifypeadmin.Utils.SharedPrefs;
@@ -52,7 +53,7 @@ public class ChatScreen extends AppCompatActivity {
         }
         this.setTitle("Support Chat");
         phone = getIntent().getStringExtra("phone");
-        mDatabase = FirebaseDatabase.getInstance("https://verifipe-default-rtdb.firebaseio.com/").getReference();
+        mDatabase = Constants.M_DATABASE;
         adapter = new SupportChatAdapter(this, itemList);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

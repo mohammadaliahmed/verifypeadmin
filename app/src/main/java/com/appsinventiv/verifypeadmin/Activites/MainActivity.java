@@ -21,36 +21,45 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
 
 
-    CardView support;
+    CardView support, notifications;
     private DatabaseReference mDatabase;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        support=findViewById(R.id.support);
+        notifications = findViewById(R.id.notifications);
+        support = findViewById(R.id.support);
         support.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ChatListScreen.class));
+                startActivity(new Intent(MainActivity.this, ChatListScreen.class));
+            }
+        });
+        notifications.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Notifications.class));
             }
         });
         updateFcmKey();
 
 
     }
+
     private void updateFcmKey() {
-            FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
-                @Override
-                public void onComplete(@NonNull Task<String> task) {
-                    String token = task.getResult();
-                    SharedPrefs.setFcmKey(token);
-                    mDatabase = FirebaseDatabase.getInstance("https://verifipe-default-rtdb.firebaseio.com/").getReference();
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+            @Override
+            public void onComplete(@NonNull Task<String> task) {
+                String token = task.getResult();
+                SharedPrefs.setFcmKey(token);
+                mDatabase = FirebaseDatabase.getInstance("https://verifipe-default-rtdb.firebaseio.com/").getReference();
 
-                    mDatabase.child("Admin").child("fcmKey").setValue(token);
+                mDatabase.child("Admin").child("fcmKey").setValue(token);
 
-                }
-            });
+            }
+        });
 
     }
 
