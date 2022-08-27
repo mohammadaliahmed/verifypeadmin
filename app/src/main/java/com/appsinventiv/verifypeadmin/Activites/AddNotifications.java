@@ -90,6 +90,7 @@ public class AddNotifications extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (imageUrl == null) {
                     CommonUtils.showToast("Please select image");
                 } else if (url.getText().length() == 0) {
