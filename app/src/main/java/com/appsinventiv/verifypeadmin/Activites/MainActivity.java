@@ -21,7 +21,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
 
 
-    CardView support, notifications;
+    CardView support, notifications, banners;
     private DatabaseReference mDatabase;
 
 
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        banners = findViewById(R.id.banners);
         notifications = findViewById(R.id.notifications);
         support = findViewById(R.id.support);
         support.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Notifications.class));
+            }
+        });
+        banners.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Banners.class));
             }
         });
         updateFcmKey();
