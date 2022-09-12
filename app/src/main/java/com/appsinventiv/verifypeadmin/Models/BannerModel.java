@@ -1,12 +1,21 @@
 package com.appsinventiv.verifypeadmin.Models;
 
 public class BannerModel {
-    String id, message, imageUrl;
+    String id, message, imageUrl,url;
 
-    public BannerModel(String id, String message, String imageUrl) {
+    public BannerModel(String id, String message, String imageUrl, String url) {
         this.id = id;
         this.message = message;
+        this.url = url;
         this.imageUrl = imageUrl;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getId() {

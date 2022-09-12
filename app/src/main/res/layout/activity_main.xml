@@ -132,7 +132,7 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
-                            android:src="@drawable/team" />
+                            android:src="@drawable/fraud" />
 
                         <TextView
 
@@ -212,14 +212,14 @@
                             android:layout_height="80dp"
                             android:layout_gravity="center"
                             android:layout_margin="10dp"
-                            android:src="@drawable/team" />
+                            android:src="@drawable/gallery" />
 
                         <TextView
 
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="Banners"
+                            android:text="News Banners"
                             android:textColor="#000"
                             android:textSize="20sp" />
 

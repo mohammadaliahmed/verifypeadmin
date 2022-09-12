@@ -46,6 +46,7 @@ public class BannersAdapter extends RecyclerView.Adapter<BannersAdapter.ViewHold
         BannerModel model = itemList.get(position);
 
         holder.title.setText(model.getMessage());
+        holder.url.setText(model.getUrl());
         Glide.with(context).load(model.getImageUrl()).into(holder.image);
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,11 +63,12 @@ public class BannersAdapter extends RecyclerView.Adapter<BannersAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView title;
+        TextView title,url;
         ImageView image,delete;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            url = itemView.findViewById(R.id.url);
             image = itemView.findViewById(R.id.image);
             delete = itemView.findViewById(R.id.delete);
             title = itemView.findViewById(R.id.title);

@@ -21,7 +21,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
 
 
-    CardView support, notifications, banners;
+    CardView support, notifications, banners, users;
     private DatabaseReference mDatabase;
 
 
@@ -29,9 +29,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        users = findViewById(R.id.users);
         banners = findViewById(R.id.banners);
         notifications = findViewById(R.id.notifications);
         support = findViewById(R.id.support);
+        users.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ListOfUsers.class));
+            }
+        });
         support.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

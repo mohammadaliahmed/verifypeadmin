@@ -12,8 +12,16 @@
         <entry key="..\:/VerifyPe - admin/app/src/main/res/layout/notification_item_layout.xml" value="0.20416666666666666" />
         <entry key="..\:/VerifyPe - admin/app/src/main/res/layout/support_left_chat_layout.xml" value="0.203125" />
         <entry key="..\:/VerifyPe - admin/app/src/main/res/layout/support_right_chat_layout.xml" value="0.20416666666666666" />
-        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/activity_banners.xml" value="0.5" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/drawable/black_corners.xml" value="0.1515" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/drawable/edit_text_curved.xml" value="0.1515" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/activity_banners.xml" value="0.20416666666666666" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/activity_chat_screen.xml" value="0.20416666666666666" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/activity_list_of_users.xml" value="0.203125" />
         <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/activity_view_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/banner_item_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/notification_item_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/android projects/verifypeadmin/app/src/main/res/layout/user_item_layout.xml" value="0.203125" />
       </map>
     </option>
   </component>

@@ -39,6 +39,8 @@
         <activity android:name=".Activites.Notifications" />
         <activity android:name=".Activites.AddNotifications" />
         <activity android:name=".Activites.Banners" />
+        <activity android:name=".Activites.ListOfUsers" />
+        <activity android:name=".Activites.UserProfile" />
 
         <service android:name=".Utils.MyFirebaseMessagingService"
             android:exported="false">

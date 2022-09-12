@@ -54,7 +54,7 @@ public class Banners extends AppCompatActivity {
     ImageView pickImage;
     private ArrayList<String> mSelected = new ArrayList<>();
     private String imageUrl;
-    EditText details;
+    EditText details,url;
     ProgressBar progress;
     DatabaseReference mDatabase;
     private String livePicPath;
@@ -71,6 +71,7 @@ public class Banners extends AppCompatActivity {
             this.setTitle("Banners");
         }
         mDatabase = Constants.M_DATABASE;
+        url = findViewById(R.id.url);
         progress = findViewById(R.id.progress);
         upload = findViewById(R.id.upload);
         details = findViewById(R.id.details);
@@ -82,6 +83,8 @@ public class Banners extends AppCompatActivity {
             public void onClick(View v) {
                 if (details.getText().length() == 0) {
                     details.setError("Enter Message");
+                } else if (url.getText().length() == 0) {
+                    url.setError("Enter url");
                 } else if (imageUrl == null) {
                     CommonUtils.showToast("Please select image");
                 } else {
@@ -224,7 +227,7 @@ public class Banners extends AppCompatActivity {
 
     private void saveData() {
         String key = "" + System.currentTimeMillis();
-        BannerModel model = new BannerModel(key, details.getText().toString(), livePicPath);
+        BannerModel model = new BannerModel(key, details.getText().toString(), livePicPath,url.getText().toString());
         mDatabase.child("Banners").child(key).setValue(model).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
